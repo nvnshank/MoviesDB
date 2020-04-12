@@ -1,71 +1,39 @@
 package com.spritle.moviesdb.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import org.springframework.stereotype.Component;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.spritle.moviesdb.model.Actor;
+import com.spritle.moviesdb.model.Genre;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Data
+@Component
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class MovieDto {
+public class MovieDto implements Serializable {
 	private Long id;
-	private String overview;
-	@JsonProperty("release_date")
-	private Date releaseDate;
-	private String title;	
-	private Integer movieId;
-	@JsonProperty("genre_ids")
-	private int[] generes;
-	private List<CastDto> myCast = new ArrayList<>();
-	private List<GenereDto> myGenere = new ArrayList<>();
+	private String review;
+	private Date releasedate;
+	private String title;
+	private List<Actor> actors=new ArrayList<Actor>();
+	private List<Genre> genres =new ArrayList<Genre>();
+	private Integer movieid;
 	
-	public Integer getMovieId() {
-		return movieId;
-	}
-	public void setMovieId(Integer movieId) {
-		this.movieId = movieId;
-	}
-	public List<CastDto> getMyCast() {
-		return myCast;
-	}
-	public List<GenereDto> getMyGenere() {
-		return myGenere;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getOverview() {
-		return overview;
-	}
-	public void setOverview(String overview) {
-		this.overview = overview;
-	}	
-	public Date getReleaseDate() {
-		return releaseDate;
-	}
-	public void setReleaseDate(Date releaseDate) {
-		this.releaseDate = releaseDate;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public int[] getGeneres() {
-		return generes;
-	}
-	public void setGeneres(int[] generes) {
-		this.generes = generes;
-	}
-	public void setMyCast(List<CastDto> myCast) {
-		this.myCast = myCast;
-	}
-	public void setMyGenere(List<GenereDto> myGenere) {
-		this.myGenere = myGenere;
-	}	
 }
