@@ -19,22 +19,16 @@ For testing this project you need to install MySql Community Edition 5.7 Version
 After installing create a user with credential details username=root and password=root. 
 And create a schema db with name "moviesdb".
 
-The Postgresql database can be setup to run in a Docker image. The steps for the setup can be found in the postgresql.sh file.
-Movie import
+## I didn't configure Liquibase in this project. Sorry!
 
-To import movies a key needs to be provieded at signin. To get such a key according to this Faq
-Setup
+## See below steps for building artifact jar and running this application.
 
-Postgresql 9.x or newer.
+1) First configure MySql Database schema and clone this git repository.
+2) This is multimodule project so select Main project and do Maven "CLEAN" and "INSTALL" respectively.
+3) Now update your Maven Project by selecting "Force Update of Snapshots/Releases"
+4) Select "STORE" module and then select Run As : Spring Boot App
+5) After successfully completing above steps run "SERVICE" module by doing same as explained in previous step 4.
 
-Eclipse Oxygen JEE or newer.
+## Now for testing MOVIE Rest Resource API :
 
-Install Eclipse Plugin 'Eclipse Wild Web Developer' of the Eclipse Marketplace.
-
-Maven 3.3.3 or newer.
-
-Nodejs 12.16.x or newer
-
-Npm 6.13.x or newer
-
-Angular Cli 9 or newer.
+  
