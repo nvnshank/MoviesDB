@@ -153,7 +153,9 @@ You can pass any Genre, Actor and Movie Details according to your choice. I did'
     ]
 }
 
-You can pass any Genre, Actor and Movie Details according to your choice for updation. I did'nt configure validation so no need to worry for length also.
+You can pass the movie record's id which you want to update and along with the changes you want to make. 
+Any Genre, Actor and Movie Details can be passed according to your choice for updation.
+I did'nt configure validation so no need to worry for length also.
 
 ******************************************************************************************************************************
 
