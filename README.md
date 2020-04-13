@@ -36,6 +36,8 @@ all the database insertion operation inside Service Module's Spring Boot App mai
 
 ## Now for testing MOVIE Rest Resource API :
 
+#### Please Configure Content and Accept Type in POSTMAN Testing Tool as application/json for all sending request.
+
 *******************************************************************************************************
 # GET Request
 
