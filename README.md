@@ -34,9 +34,9 @@ all the database insertion operation inside Service Module's Spring Boot App mai
 
 ### Now only thing you need to do is to check Movie Rest API by using Postman tool.
 
-## Now for testing MOVIE Rest Resource API :
+### Follow below mentioned procedure for testing MOVIE Rest Resource API :
 
-#### Please Configure Content and Accept Type in POSTMAN Testing Tool as application/json for all sending request.
+#### Note : Please Configure Content and Accept Type in POSTMAN Testing Tool as application/json for all sending request.
 
 *******************************************************************************************************
 # GET Request
