@@ -29,6 +29,145 @@ And create a schema db with name "moviesdb".
 4) Select "STORE" module and then select Run As : Spring Boot App
 5) After successfully completing above steps run "SERVICE" module by doing same as explained in previous step 4.
 
+You don't need to perform any insert operation for inserting Movie Record into the database because I have configured
+all the database insertion operation inside Service Module's Spring Boot App main class by implementing "run(String... args)" method of CommandLineRunner interface.
+
+### Now only thing you need to do is to check Movie Rest API by using Postman tool.
+
 ## Now for testing MOVIE Rest Resource API :
 
+*******************************************************************************************************
+# GET Request
+
+### For getting all Movie Records from DB.
+   
+   Send GET Request on  http://localhost:8080/movies
+   
+### For getting single Movie Record by sending specific id as path varibale.
+
+Send GET Request with ID Path Variable on http://localhost:8080/movies/{id}
+-******************************************************************************************************
+# POST Request
+
+### For creating a Movie Record into the Database.
+
+Send Post Request on http://localhost:8080/movies
+
+### Add below JSON Structured Data in request body of the post request for Movie record create operation.
+
+{
+    "title": "Any Dummy Name",
+    "review": "Any Review You Can Write Here",
+    "releaseDate": "2020-04-12T15:31:56.000+0000",
+    "actors": [
+        {
+            "firstname": "ActorName1",
+            "lastname": "ActorLastName1",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        },
+        {
+            "firstname": "ActorName2",
+            "lastname": "ActorLastName2",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        },
+        {
+            "firstname": "ActorName3",
+            "lastname": "ActorLastName3",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        },
+        {
+            "firstname": "ActorName4",
+            "lastname": "ActorLastName4",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        }
+    ],
+    "genres": [
+        {
+            "genrename": "Crime"
+        }
+    ]
+}
+
+You can pass any Genre, Actor and Movie Details accoding to your choice. I did'nt configure validation so no need to worry for length also.
+
+******************************************************************************************************************************
+
+# Delete Request
+
+### For deleting a Movie Record from the Database.
+
+  Send DELETE Request on http://localhost:8080/movies/{id}
   
+  Pass Specific ID as a Path Variable for deleting a Movie Record.
+
+******************************************************************************************************************************
+# Put Request 
+ 
+ ### For Updating a Movie Record in the Database.
+ 
+ Send PUT Request for Updatig Stored Movie Record on http://localhost:8080/movies
+ 
+ ### Add below JSON Structured Data in request body of the PUT request for Movie record update operation.
+
+{
+	"id": "2",
+    "title": "Any Dummy Movie Name Text",
+    "review": "Any Review Text",
+    "releaseDate": "2020-04-12T15:31:56.000+0000",
+    "actors": [
+        {
+            "firstname": "ActorName1",
+            "lastname": "ActorLastName1",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        },
+        {
+            "firstname": "ActorName2",
+            "lastname": "ActorLastName2",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        },
+        {
+            "firstname": "ActorName3",
+            "lastname": "ActorLastName3",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        },
+        {
+            "firstname": "ActorName4",
+            "lastname": "ActorLastName4",
+            "gender": "Male",
+            "dateofbirth": "2020-04-12T15:31:56.000+0000"
+        }
+    ],
+    "genres": [
+        {
+            "genrename": "Crime"
+        }
+    ]
+}
+
+You can pass any Genre, Actor and Movie Details accoding to your choice for updation. I did'nt configure validation so no need to worry for length also.
+
+******************************************************************************************************************************
+
+# Some Useful Links Related To Swagger, Swagger UI, and Spring Boot Actuator.
+
+### http://localhost:8080/ 
+
+### Swagger UI Link       ::        http://localhost:8080/swagger-ui.html#/movie-rest-controller 
+###                                 http://localhost:8080/swagger-ui.html
+                   
+### Api Doc               ::        http://localhost:8080/v2/api-docs 
+
+### Spring Boot Actuator  ::        http://localhost:8080/actuator
+
+### App Health Check      ::        http://localhost:8080/ 
+
+*******************************************************************************************************************************
+  
+# THANKS Team Spritle!
