@@ -19,8 +19,7 @@ For testing this project you need to install MySql Community Edition 5.7 Version
 After installing create a user with credential details username=root and password=root. 
 And create a schema db with name "moviesdb".
 
-## Due to busy schedule and work pressure, I didn't configure Liquibase in this project. 
-## I know how to work with it but i need some more time to implement it. Sorry!
+## Due to busy schedule and work pressure, I didn't configure Liquibase in this project.I know how to work with it but i need some more time to implement it. Sorry!
 
 ## See below steps for building artifact jar and running this application.
 
