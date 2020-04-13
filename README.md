@@ -92,7 +92,7 @@ Send Post Request on http://localhost:8080/movies
     ]
 }
 
-You can pass any Genre, Actor and Movie Details accoding to your choice. I did'nt configure validation so no need to worry for length also.
+You can pass any Genre, Actor and Movie Details according to your choice. I did'nt configure validation so no need to worry for length also.
 
 ******************************************************************************************************************************
 
@@ -151,7 +151,7 @@ You can pass any Genre, Actor and Movie Details accoding to your choice. I did'n
     ]
 }
 
-You can pass any Genre, Actor and Movie Details accoding to your choice for updation. I did'nt configure validation so no need to worry for length also.
+You can pass any Genre, Actor and Movie Details according to your choice for updation. I did'nt configure validation so no need to worry for length also.
 
 ******************************************************************************************************************************
 
